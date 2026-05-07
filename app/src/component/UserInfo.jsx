@@ -30,7 +30,7 @@ const UserInfo = ({p,deleteUSer}) => {
                             <Table.Cell>{v.role}</Table.Cell>
                             <Table.Cell>
                                 <Link href={`/user/${v._id}`}><Button variant='outline'>Details</Button></Link>
-                                <Link href={`/user/${v._id}`}><Button variant='outline'>Edit</Button></Link>
+                                <Link href={`/user/${v._id}/edit`}><Button variant='outline'>Edit</Button></Link>
                                 
                                 <AlertDialog>
       <Button variant="danger">Delete</Button>

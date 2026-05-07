@@ -1,8 +1,11 @@
+import { getId } from '@/lib/data';
 import React from 'react';
 
 const page = async ({params}) => {
 
-    const
+    const {id} = await params
+    const data = await getId(id)
+    console.log(data)
 
     return (
         <div>
