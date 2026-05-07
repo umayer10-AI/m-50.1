@@ -4,6 +4,7 @@ export const createUSer = async (formData) => {
     'use server'
 
     const newUSer = Object.fromEntries(formData.entries())
+    console.log(newUSer)
 
     const res = await fetch(`http://localhost:5000/user`,{
         method: "POST",
@@ -12,13 +13,13 @@ export const createUSer = async (formData) => {
         },
         body: JSON.stringify(newUSer)
     })
-    
-    const data = await res.json()
 
+    const data = await res.json()
     console.log("After Delete",data)
-    // if(data.deletedCount > 0){
-    //     revalidatePath("/user")
-    // }
+    
+    if(data.insertedId){
+        revalidatePath("/user")
+    }
     return data
 }
 

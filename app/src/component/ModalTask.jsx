@@ -2,7 +2,7 @@
 import {Button, Input, Label, Modal, Surface, TextField} from "@heroui/react";
 import React from 'react';
 
-const ModalTask = () => {
+const ModalTask = ({createUSer}) => {
     return (
         <div>
             <Modal>
@@ -18,7 +18,7 @@ const ModalTask = () => {
             </Modal.Header>
             <Modal.Body className="p-6">
               <Surface variant="default">
-                <form className="flex flex-col gap-4">
+                <form action={createUSer} className="flex flex-col gap-4">
                   <TextField className="w-full" name="name" type="text">
                     <Label>Name</Label>
                     <Input placeholder="Enter your name" />
