@@ -1,4 +1,5 @@
 import UserInfo from '@/component/UserInfo';
+import { deleteUSer } from '@/lib/action';
 import { getData } from '@/lib/data';
 import React from 'react';
 
@@ -10,7 +11,7 @@ const page = async () => {
     return (
         <div>
             User Management: {data.length}
-            <UserInfo p={data}></UserInfo>
+            <UserInfo p={data} deleteUSer={deleteUSer}></UserInfo>
         </div>
     );
 };

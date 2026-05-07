@@ -1,10 +1,9 @@
 "use client"
-import { deleteUSer } from '@/lib/action';
 import { AlertDialog, Button, Table } from '@heroui/react';
 import Link from 'next/link';
 import React from 'react';
 
-const UserInfo = ({p}) => {
+const UserInfo = ({p,deleteUSer}) => {
 
     const a = async (id) => {
         await deleteUSer(id)
