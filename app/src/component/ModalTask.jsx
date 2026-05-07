@@ -1,5 +1,4 @@
 "use client";
-import {Envelope} from "@gravity-ui/icons";
 import {Button, Input, Label, Modal, Surface, TextField} from "@heroui/react";
 import React from 'react';
 
@@ -13,9 +12,7 @@ const ModalTask = () => {
           <Modal.Dialog className="sm:max-w-md">
             <Modal.CloseTrigger />
             <Modal.Header>
-              <Modal.Icon className="bg-accent-soft text-accent-soft-foreground">
-                <Envelope className="size-5" />
-              </Modal.Icon>
+
               <Modal.Heading>Add User</Modal.Heading>
 
             </Modal.Header>
