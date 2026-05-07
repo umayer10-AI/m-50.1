@@ -6,6 +6,8 @@ const port = process.env.PORT || 5000
 app.use(cors())
 app.use(express.json())
 
+// mongodb+srv://server2:nrMfNcMWFj0MTOMv@cluster0.ywso1qs.mongodb.net/?appName=Cluster0
+
 app.get('/', (req,res) => {
     res.send("Umayer Ahmad")
 })
