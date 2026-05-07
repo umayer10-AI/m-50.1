@@ -1,3 +1,4 @@
+import ModalTask from '@/component/ModalTask';
 import UserInfo from '@/component/UserInfo';
 import { deleteUSer } from '@/lib/action';
 import { getData } from '@/lib/data';
@@ -10,7 +11,10 @@ const page = async () => {
 
     return (
         <div>
-            User Management: {data.length}
+            <div className='flex justify-center items-center gap-3'>
+                <h2>User Management: {data.length}</h2>
+                <ModalTask></ModalTask>
+            </div>
             <UserInfo p={data} deleteUSer={deleteUSer}></UserInfo>
         </div>
     );
