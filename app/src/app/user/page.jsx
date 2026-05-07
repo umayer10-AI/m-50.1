@@ -1,6 +1,9 @@
 import React from 'react';
 
-const page = () => {
+const page = async () => {
+
+    
+
     return (
         <div>
             User MAnagement
