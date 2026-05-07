@@ -10,7 +10,8 @@ const page = async ({params}) => {
     console.log(data)
 
     const a = async (formData) => {
-        await updateUSer(id,formData)
+        "use server"
+        return updateUSer(id,formData)
     }
 
     return (

@@ -23,7 +23,7 @@ export const createUSer = async (formData) => {
     return data
 }
 
-export const updateUSer = async (formData) => {
+export const updateUSer = async (id,formData) => {
     'use server'
 
     const newUSer = Object.fromEntries(formData.entries())

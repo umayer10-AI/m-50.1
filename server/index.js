@@ -47,6 +47,23 @@ const run = async () => {
             res.send(result)
         })
 
+        app.patch('/user/:id', async (req,res) => {
+            const id = req.params.id
+            const filter = {
+                _id: new ObjectId(id)
+            }
+
+            const m = req.body
+
+            const updateDocument = {
+                $set: {
+                    name: m.name,
+                    email: m.email,
+                    role: m.role,
+                }
+            }
+        })
+
         app.delete('/user/:id', async (req,res) => {
             const id = req.params.id
             const query = {
