@@ -1,10 +1,14 @@
+"use client"
+import { deleteUSer } from '@/lib/action';
 import { AlertDialog, Button, Table } from '@heroui/react';
 import Link from 'next/link';
 import React from 'react';
 
 const UserInfo = ({p}) => {
 
-    console.log(p)
+    const a = async (id) => {
+        await deleteUSer(id)
+    }
 
     return (
         <div>
@@ -49,7 +53,7 @@ const UserInfo = ({p}) => {
               <Button slot="close" variant="tertiary">
                 Cancel
               </Button>
-              <Button slot="close" variant="danger">
+              <Button onClick={() => a(v._id)} slot="close" variant="danger">
                 Confirm Delete
               </Button>
             </AlertDialog.Footer>
