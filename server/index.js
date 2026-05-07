@@ -62,6 +62,9 @@ const run = async () => {
                     role: m.role,
                 }
             }
+
+            const result = await userCollection.updateOne(filter,updateDocument)
+            res.send(result)
         })
 
         app.delete('/user/:id', async (req,res) => {
