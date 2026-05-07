@@ -23,6 +23,29 @@ export const createUSer = async (formData) => {
     return data
 }
 
+export const updateUSer = async (formData) => {
+    'use server'
+
+    const newUSer = Object.fromEntries(formData.entries())
+    console.log(newUSer)
+
+    const res = await fetch(`http://localhost:5000/user`,{
+        method: "PATCH",
+        headers: {
+            "content-type" : "application/json"
+        },
+        body: JSON.stringify(newUSer)
+    })
+
+    const data = await res.json()
+    console.log("After Delete",data)
+
+    // if(data.insertedId){
+    //     revalidatePath("/user")
+    // }
+    return data
+}
+
 export const deleteUSer = async (id) => {
     'use server'
 
